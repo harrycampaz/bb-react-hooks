@@ -1,18 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Quote from './components/Quote';
 
 function App(props) {
 
   const [quote, setQuote] = useState({})
 
+  console.log(quote);
+
   useEffect(() => {
     getQuote()
-  }, [])
+  })
 
   const getQuote =  async () => {
     const result = await axios('http://breaking-bad-quotes.herokuapp.com/v1/quotes');
-    // console.log(result.data);
+    console.log(result.data);
 
     setQuote(result.data[0])
     
@@ -23,11 +24,8 @@ function App(props) {
   
 
   return (
-    <div className="contenedor">
-      <Quote quoteItem={quote}/>
-
-<button onClick={getQuote}>New QUote</button>
-
+    <div>
+      
     </div>
   );
 }

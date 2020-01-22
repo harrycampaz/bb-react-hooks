@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Quote from './components/Quote';
 
 function App(props) {
 
@@ -23,11 +22,8 @@ function App(props) {
   
 
   return (
-    <div className="contenedor">
-      <Quote quoteItem={quote}/>
-
-<button onClick={getQuote}>New QUote</button>
-
+    <div>
+      
     </div>
   );
 }

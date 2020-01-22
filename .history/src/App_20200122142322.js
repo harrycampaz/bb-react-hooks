@@ -24,10 +24,7 @@ function App(props) {
 
   return (
     <div className="contenedor">
-      <Quote quoteItem={quote}/>
-
-<button onClick={getQuote}>New QUote</button>
-
+      <Quote quote={quote}/>
     </div>
   );
 }
